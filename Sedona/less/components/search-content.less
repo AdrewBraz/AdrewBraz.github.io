@@ -1,0 +1,258 @@
+.search-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+    
+  margin: 0;
+  padding: 0;
+    
+  &__inner{
+    min-width: @mobile;
+    margin: 0 auto;
+    width: 100%;
+        
+    @media screen and(min-width: @tablet){
+      min-width: @tablet;
+    }
+        
+    @media screen and(min-width: @laptop){
+      max-width: @laptop;
+    }
+  }
+    
+    
+  &__btn{
+    border: none;
+    outline: none;
+    padding: 30px 0;
+    width: 100%;
+        
+    background-color: @btn;
+    text-align: center;
+    text-transform: @text-transform;
+    color: @white;
+    font-family: @font-family;
+    font-size: @h2;
+      
+    cursor: pointer;
+            
+    @media screen and(min-width: @tablet){
+      font-size: @h2-768;
+    }
+        
+    &:hover{
+      background-color: @btn-hover;
+    }
+      
+    &-wrap{
+      width: 100%;
+      margin: 0;
+        
+      @media screen and(min-width:@tablet){
+        width: 70%;
+        margin: 0 auto;
+      }
+    }
+  }
+    
+  &__form{
+    display: none;
+  }
+}
+
+.search-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  width: 100%;
+  padding: 40px;
+  
+  @media screen and(min-width:@tablet){
+    width: 70%;
+    margin: 0 auto;
+    padding: 50px;
+    
+    box-shadow: 1px 1px 10px 0 #000;
+  }
+    
+  @media screen and(min-width: 1280px) {
+    padding: 50px 150px;
+  }
+  
+  &__in{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    @media screen and(min-width:@tablet){
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+    
+    
+    & label{
+      padding: 10px;
+      
+      font-size: @font-size;
+      font-weight: @bold;
+      font-family: @font-family;
+      background: #fff;
+      text-transform: uppercase;
+    }
+    
+    & input{
+      #input;
+      position: relative;
+      flex-grow: 2;
+      
+      padding-right: 40px;
+    }
+    
+  }
+  
+  &__out{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    @media screen and(min-width:@tablet){
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+    
+    
+    & label{
+      padding: 10px;
+      
+      font-size: @font-size;
+      font-weight: @bold;
+      font-family: @font-family;
+      background: #fff;
+      text-transform: uppercase;
+    }
+    
+    & input{
+      #input;
+      position: relative;
+      flex-grow: 2;
+      
+      padding-right: 40px;
+    }
+    
+  }
+  
+  &__people-quantity{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  
+  &__adult-quantity{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    @media screen and(min-width:@tablet){
+      flex-direction: row;
+    }
+    
+     
+    & label{
+      padding: 10px;
+      
+      font-size: @font-size;
+      font-weight: @bold;
+      font-family: @font-family;
+      background: #fff;
+      text-transform: uppercase;
+    }
+    
+  }
+  
+  &__child-quantity{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    @media screen and(min-width:@tablet){
+      flex-direction: row;
+    }
+     
+    & label{
+      padding: 10px;
+      
+      font-size: @font-size;
+      font-weight: @bold;
+      font-family: @font-family;
+      background: #fff;
+      text-transform: uppercase;
+    }
+  }
+  
+  &__submit-btn{
+      border: none;
+      outline: none;
+      padding: 20px 0;
+      width: 100%;
+        
+      background-color: @blue;
+      text-align: center;
+      text-transform: @text-transform;
+      color: @white;
+      font-family: @font-family;
+      font-size: @h2;
+            
+      @media screen and(min-width: @tablet){
+        font-size: @h2-768;
+      }
+        
+      &:hover{
+        background-color: @blue-dark;
+    }
+      
+    &-wrap{
+      width: 100%;
+      margin: 0;
+        
+      @media screen and(min-width:@tablet){
+      width: 100%;
+      margin: 0 auto;
+      }
+    }
+  }
+}
+.search-content__form-open{
+  display: block;
+}
+
+
+.counter{
+  &__adult,
+  &__child{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+    
+    & input{
+      #input;
+      position: relative;
+      
+      width: 65px;
+      text-align: center;
+    }
+  }
+    
+  &__minus,
+  &__plus{
+    outline: none;
+    border: none;
+    height: 39px;
+    width: 30px;
+    padding: 5px;
+  }
+}
