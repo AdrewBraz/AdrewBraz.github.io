@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<script src="https://rawgit.com/jonathantneal/svg4everybody/master/dist/svg4everybody.js"></script>
+		<script>svg4everybody();</script>
+		<title>SVG &lt;symbol&gt; sprite preview | svg-sprite</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+		
+<!--
+	
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as inline SVG, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+
+-->
+
+<style type="text/css">
+	$icons--back-dims { width: 477.175px; height: 477.175px; }
+	$icons--facebook-logo-button-dims { width: 49.652px; height: 49.652px; }
+	$icons--icon-cross-dims { width: 22.199px; height: 22.199px; }
+	$icons--instagram-logo-dims { width: 49.652px; height: 49.652px; }
+	$icons--logout-dims { width: 471.2px; height: 471.2px; }
+	$icons--magnifying-glass-dims { width: 451px; height: 451px; }
+	$icons--next-dims { width: 477.175px; height: 477.175px; }
+	$icons--phone-call-dims { width: 473.806px; height: 473.806px; }
+	$icons--ribbon-dims { width: 312.746px; height: 312.746px; }
+	$icons--shopping-cart-dims { width: 486.569px; height: 486.569px; }
+	$icons--success-dims { width: 50px; height: 50px; }
+	$icons--twitter-logo-button-dims { width: 49.652px; height: 49.652px; }
+</style>
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+	
+<!--
+	
+Inline <symbol> SVG sprite
+====================================================================================================
+This is an inlined version of the generated SVG sprite. The single images may be <use>d everywhere
+below within this document. Please see
+
+	https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode
+
+for further details on how to create this embeddable sprite variant.
+
+-->
+
+<svg width="0" height="0" style="position:absolute">
+		<symbol viewBox="0 0 477.175 477.175" id="icons--back"><path d="M145.188 238.575l215.5-215.5c5.3-5.3 5.3-13.8 0-19.1s-13.8-5.3-19.1 0l-225.1 225.1c-5.3 5.3-5.3 13.8 0 19.1l225.1 225c2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4c5.3-5.3 5.3-13.8 0-19.1l-215.4-215.5z"/></symbol>
+		<symbol viewBox="0 0 49.652 49.652" id="icons--facebook-logo-button"><path d="M24.826 0C11.137 0 0 11.137 0 24.826c0 13.688 11.137 24.826 24.826 24.826 13.688 0 24.826-11.138 24.826-24.826C49.652 11.137 38.516 0 24.826 0zM31 25.7h-4.039v14.396h-5.985V25.7h-2.845v-5.088h2.845v-3.291c0-2.357 1.12-6.04 6.04-6.04l4.435.017v4.939h-3.219c-.524 0-1.269.262-1.269 1.386v2.99h4.56L31 25.7z"/></symbol>
+		<symbol viewBox="0 0 22.199 22.199" id="icons--icon-cross"><path d="M22.199 2.804L19.396 0 11.1 8.297 2.804 0 0 2.803 8.297 11.1 0 19.396l2.803 2.803 8.297-8.297 8.296 8.297 2.803-2.803-8.296-8.296z"/></symbol>
+		<symbol viewBox="0 0 49.652 49.652" id="icons--instagram-logo"><path d="M24.825 29.796a4.978 4.978 0 0 0 4.972-4.97 4.954 4.954 0 0 0-.94-2.897 4.964 4.964 0 0 0-4.029-2.073c-1.659 0-3.126.82-4.031 2.072a4.947 4.947 0 0 0-.94 2.897 4.973 4.973 0 0 0 4.968 4.971zM35.678 18.746V13.96l-.623.002-4.164.013.016 4.787z"/><path d="M24.826 0C11.137 0 0 11.137 0 24.826c0 13.688 11.137 24.826 24.826 24.826 13.688 0 24.826-11.138 24.826-24.826C49.652 11.137 38.516 0 24.826 0zm14.119 21.929v11.56a5.463 5.463 0 0 1-5.457 5.458H16.164a5.462 5.462 0 0 1-5.457-5.458V16.165a5.462 5.462 0 0 1 5.457-5.457h17.323a5.463 5.463 0 0 1 5.458 5.457v5.764z"/><path d="M32.549 24.826c0 4.257-3.464 7.723-7.723 7.723s-7.722-3.466-7.722-7.723a7.67 7.67 0 0 1 .568-2.897h-4.215v11.56a2.706 2.706 0 0 0 2.706 2.704h17.323a2.707 2.707 0 0 0 2.706-2.704v-11.56h-4.217c.367.894.574 1.873.574 2.897z"/></symbol>
+		<symbol viewBox="0 0 471.2 471.2" id="icons--logout"><path d="M227.619 444.2h-122.9c-33.4 0-60.5-27.2-60.5-60.5V87.5c0-33.4 27.2-60.5 60.5-60.5h124.9c7.5 0 13.5-6 13.5-13.5s-6-13.5-13.5-13.5h-124.9c-48.3 0-87.5 39.3-87.5 87.5v296.2c0 48.3 39.3 87.5 87.5 87.5h122.9c7.5 0 13.5-6 13.5-13.5s-6.1-13.5-13.5-13.5z"/><path d="M450.019 226.1l-85.8-85.8c-5.3-5.3-13.8-5.3-19.1 0-5.3 5.3-5.3 13.8 0 19.1l62.8 62.8h-273.9c-7.5 0-13.5 6-13.5 13.5s6 13.5 13.5 13.5h273.9l-62.8 62.8c-5.3 5.3-5.3 13.8 0 19.1 2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4l85.8-85.8c5.4-5.4 5.4-14 .1-19.2z"/></symbol>
+		<symbol viewBox="0 0 451 451" id="icons--magnifying-glass"><path d="M447.05 428l-109.6-109.6c29.4-33.8 47.2-77.9 47.2-126.1C384.65 86.2 298.35 0 192.35 0 86.25 0 .05 86.3.05 192.3s86.3 192.3 192.3 192.3c48.2 0 92.3-17.8 126.1-47.2L428.05 447c2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4c5.2-5.2 5.2-13.8 0-19zM26.95 192.3c0-91.2 74.2-165.3 165.3-165.3 91.2 0 165.3 74.2 165.3 165.3s-74.1 165.4-165.3 165.4c-91.1 0-165.3-74.2-165.3-165.4z"/></symbol>
+		<symbol viewBox="0 0 477.175 477.175" id="icons--next"><path d="M360.731 229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1 0s-5.3 13.8 0 19.1l215.5 215.5-215.5 215.5c-5.3 5.3-5.3 13.8 0 19.1 2.6 2.6 6.1 4 9.5 4 3.4 0 6.9-1.3 9.5-4l225.1-225.1c5.3-5.2 5.3-13.8.1-19z"/></symbol>
+		<symbol viewBox="0 0 473.806 473.806" id="icons--phone-call"><path d="M374.456 293.506c-9.7-10.1-21.4-15.5-33.8-15.5-12.3 0-24.1 5.3-34.2 15.4l-31.6 31.5c-2.6-1.4-5.2-2.7-7.7-4-3.6-1.8-7-3.5-9.9-5.3-29.6-18.8-56.5-43.3-82.3-75-12.5-15.8-20.9-29.1-27-42.6 8.2-7.5 15.8-15.3 23.2-22.8 2.8-2.8 5.6-5.7 8.4-8.5 21-21 21-48.2 0-69.2l-27.3-27.3c-3.1-3.1-6.3-6.3-9.3-9.5-6-6.2-12.3-12.6-18.8-18.6-9.7-9.6-21.3-14.7-33.5-14.7s-24 5.1-34 14.7l-.2.2-34 34.3c-12.8 12.8-20.1 28.4-21.7 46.5-2.4 29.2 6.2 56.4 12.8 74.2 16.2 43.7 40.4 84.2 76.5 127.6 43.8 52.3 96.5 93.6 156.7 122.7 23 10.9 53.7 23.8 88 26 2.1.1 4.3.2 6.3.2 23.1 0 42.5-8.3 57.7-24.8.1-.2.3-.3.4-.5 5.2-6.3 11.2-12 17.5-18.1 4.3-4.1 8.7-8.4 13-12.9 9.9-10.3 15.1-22.3 15.1-34.6 0-12.4-5.3-24.3-15.4-34.3l-54.9-55.1zm35.8 105.3c-.1 0-.1.1 0 0-3.9 4.2-7.9 8-12.2 12.2-6.5 6.2-13.1 12.7-19.3 20-10.1 10.8-22 15.9-37.6 15.9-1.5 0-3.1 0-4.6-.1-29.7-1.9-57.3-13.5-78-23.4-56.6-27.4-106.3-66.3-147.6-115.6-34.1-41.1-56.9-79.1-72-119.9-9.3-24.9-12.7-44.3-11.2-62.6 1-11.7 5.5-21.4 13.8-29.7l34.1-34.1c4.9-4.6 10.1-7.1 15.2-7.1 6.3 0 11.4 3.8 14.6 7l.3.3c6.1 5.7 11.9 11.6 18 17.9 3.1 3.2 6.3 6.4 9.5 9.7l27.3 27.3c10.6 10.6 10.6 20.4 0 31-2.9 2.9-5.7 5.8-8.6 8.6-8.4 8.6-16.4 16.6-25.1 24.4-.2.2-.4.3-.5.5-8.6 8.6-7 17-5.2 22.7l.3.9c7.1 17.2 17.1 33.4 32.3 52.7l.1.1c27.6 34 56.7 60.5 88.8 80.8 4.1 2.6 8.3 4.7 12.3 6.7 3.6 1.8 7 3.5 9.9 5.3.4.2.8.5 1.2.7 3.4 1.7 6.6 2.5 9.9 2.5 8.3 0 13.5-5.2 15.2-6.9l34.2-34.2c3.4-3.4 8.8-7.5 15.1-7.5 6.2 0 11.3 3.9 14.4 7.3l.2.2 55.1 55.1c10.3 10.2 10.3 20.7.1 31.3zM256.056 112.706c26.2 4.4 50 16.8 69 35.8s31.3 42.8 35.8 69c1.1 6.6 6.8 11.2 13.3 11.2.8 0 1.5-.1 2.3-.2 7.4-1.2 12.3-8.2 11.1-15.6-5.4-31.7-20.4-60.6-43.3-83.5s-51.8-37.9-83.5-43.3c-7.4-1.2-14.3 3.7-15.6 11s3.5 14.4 10.9 15.6zM473.256 209.006c-8.9-52.2-33.5-99.7-71.3-137.5s-85.3-62.4-137.5-71.3c-7.3-1.3-14.2 3.7-15.5 11-1.2 7.4 3.7 14.3 11.1 15.6 46.6 7.9 89.1 30 122.9 63.7 33.8 33.8 55.8 76.3 63.7 122.9 1.1 6.6 6.8 11.2 13.3 11.2.8 0 1.5-.1 2.3-.2 7.3-1.1 12.3-8.1 11-15.4z"/></symbol>
+		<symbol viewBox="0 0 312.746 312.746" id="icons--ribbon"><path d="M40.347 0v312.452l117.734-120.247 114.318 120.541V0H40.347z"/></symbol>
+		<symbol viewBox="0 0 486.569 486.569" id="icons--shopping-cart"><path d="M146.069 320.369h268.1c30.4 0 55.2-24.8 55.2-55.2v-112.8-.4-.8c0-.2 0-.4-.1-.6 0-.2-.1-.5-.1-.7s-.1-.4-.1-.6c-.1-.2-.1-.4-.2-.7-.1-.2-.1-.4-.2-.6-.1-.2-.1-.4-.2-.6-.1-.2-.2-.4-.3-.7-.1-.2-.2-.4-.3-.5l-.3-.6c-.1-.2-.2-.3-.3-.5-.1-.2-.3-.4-.4-.6-.1-.2-.2-.3-.4-.5-.1-.2-.3-.3-.4-.5s-.3-.3-.4-.5-.3-.3-.4-.4l-.5-.5c-.2-.1-.3-.3-.5-.4-.2-.1-.4-.3-.6-.4-.2-.1-.3-.2-.5-.3s-.4-.2-.6-.4l-.6-.3-.6-.3-.6-.3c-.2-.1-.4-.1-.6-.2-.2-.1-.5-.2-.7-.2s-.4-.1-.5-.1c-.3-.1-.5-.1-.8-.1-.1 0-.2-.1-.4-.1l-339.8-46.9v-47.4c0-.5 0-1-.1-1.4 0-.1 0-.2-.1-.4 0-.3-.1-.6-.1-.9-.1-.3-.1-.5-.2-.8 0-.2-.1-.3-.1-.5l-.3-.9c0-.1-.1-.3-.1-.4-.1-.3-.2-.5-.4-.8-.1-.1-.1-.3-.2-.4-.1-.2-.2-.4-.4-.6-.1-.2-.2-.3-.3-.5s-.2-.3-.3-.5-.3-.4-.4-.6l-.3-.3-.6-.6-.3-.3c-.2-.2-.4-.4-.7-.6-.1-.1-.3-.2-.4-.3-.2-.2-.4-.3-.6-.5-.3-.2-.6-.4-.8-.5-.1-.1-.2-.1-.3-.2-.4-.2-.9-.4-1.3-.6l-73.7-31c-6.9-2.9-14.8.3-17.7 7.2s.3 14.8 7.2 17.7l65.4 27.6v295.8c0 28 21 51.2 48.1 54.7-4.9 8.2-7.8 17.8-7.8 28 0 30.1 24.5 54.5 54.5 54.5s54.5-24.5 54.5-54.5c0-10-2.7-19.5-7.5-27.5h121.4c-4.8 8.1-7.5 17.5-7.5 27.5 0 30.1 24.5 54.5 54.5 54.5s54.5-24.5 54.5-54.5-24.5-54.5-54.5-54.5h-255c-15.6 0-28.2-12.7-28.2-28.2v-36.6c8.2 4.8 17.9 7.6 28.2 7.6zm67.2 111.6c0 15.2-12.4 27.5-27.5 27.5s-27.5-12.4-27.5-27.5 12.4-27.5 27.5-27.5 27.5 12.3 27.5 27.5zm215.4 0c0 15.2-12.4 27.5-27.5 27.5s-27.5-12.4-27.5-27.5 12.4-27.5 27.5-27.5 27.5 12.3 27.5 27.5zm-14.5-138.6h-268.1c-15.6 0-28.2-12.7-28.2-28.2v-145.9l324.5 44.7v101.1c0 15.7-12.7 28.3-28.2 28.3z"/></symbol>
+		<symbol viewBox="0 0 50 50" id="icons--success"><circle cx="25" cy="25" r="25" fill="#25ae88"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M38 15L22 33l-10-8"/></symbol>
+		<symbol viewBox="0 0 49.652 49.652" id="icons--twitter-logo-button"><path d="M24.826 0C11.137 0 0 11.137 0 24.826c0 13.688 11.137 24.826 24.826 24.826 13.688 0 24.826-11.138 24.826-24.826C49.652 11.137 38.516 0 24.826 0zm11.075 19.144c.011.246.017.494.017.742 0 7.551-5.746 16.255-16.259 16.255-3.227 0-6.231-.943-8.759-2.565.447.053.902.08 1.363.08 2.678 0 5.141-.914 7.097-2.446a5.72 5.72 0 0 1-5.338-3.969 5.76 5.76 0 0 0 2.58-.096 5.715 5.715 0 0 1-4.583-5.603l.001-.072a5.69 5.69 0 0 0 2.587.714 5.71 5.71 0 0 1-2.541-4.755c0-1.048.281-2.03.773-2.874a16.225 16.225 0 0 0 11.777 5.972 5.707 5.707 0 0 1-.147-1.303 5.714 5.714 0 0 1 9.884-3.91 11.406 11.406 0 0 0 3.63-1.387 5.74 5.74 0 0 1-2.516 3.162 11.36 11.36 0 0 0 3.282-.899 11.494 11.494 0 0 1-2.848 2.954z"/></symbol>
+</svg>
+
+<!--
+====================================================================================================
+-->
+		
+		<header>
+			<h1>SVG <code>&lt;symbol&gt;</code> sprite preview</h1>
+			<p>This preview features two methods of using the generated sprite in conjunction with inline SVG. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+			<ul>
+				<li>Your browser has to <a href="http://caniuse.com/#feat=svg-html5" target="_blank">support inline SVG</a> for these techniques to work.</li>
+				<li>The embedded sprite (A) slightly differs from the generated external one. Please <a href="https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode" target="_blank">see the documentation</a> for details on how to create such an embeddable sprite.</li>
+				<li>Internet Explorer up to version 11 doesn't support external sprites for use with inline SVG. For IE 9-11, you may polyfill this functionality with <a href="https://github.com/jonathantneal/svg4everybody" target="_blank">SVG for Everybody</a>.</li>
+			</ul>
+		</header>
+		<section>
+
+<!--
+	
+A) Inline SVG with embedded sprite
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) and are extracted out of the inline sprite
+embedded above. They may be styled via CSS.
+
+-->
+
+			<h3>A) Inline SVG with embedded sprite</h3>
+			<ul>
+
+				<li title="icons--back">
+					<div class="icon-box">
+						
+						<!-- icons--back -->
+						<svg class="$icons--back-dims">
+							<use xlink:href="#icons--back"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--back</h2>
+				</li>
+				<li title="icons--facebook-logo-button">
+					<div class="icon-box">
+						
+						<!-- icons--facebook-logo-button -->
+						<svg class="$icons--facebook-logo-button-dims">
+							<use xlink:href="#icons--facebook-logo-button"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--facebook-logo-button</h2>
+				</li>
+				<li title="icons--icon-cross">
+					<div class="icon-box">
+						
+						<!-- icons--icon-cross -->
+						<svg class="$icons--icon-cross-dims">
+							<use xlink:href="#icons--icon-cross"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--icon-cross</h2>
+				</li>
+				<li title="icons--instagram-logo">
+					<div class="icon-box">
+						
+						<!-- icons--instagram-logo -->
+						<svg class="$icons--instagram-logo-dims">
+							<use xlink:href="#icons--instagram-logo"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--instagram-logo</h2>
+				</li>
+				<li title="icons--logout">
+					<div class="icon-box">
+						
+						<!-- icons--logout -->
+						<svg class="$icons--logout-dims">
+							<use xlink:href="#icons--logout"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--logout</h2>
+				</li>
+				<li title="icons--magnifying-glass">
+					<div class="icon-box">
+						
+						<!-- icons--magnifying-glass -->
+						<svg class="$icons--magnifying-glass-dims">
+							<use xlink:href="#icons--magnifying-glass"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--magnifying-glass</h2>
+				</li>
+				<li title="icons--next">
+					<div class="icon-box">
+						
+						<!-- icons--next -->
+						<svg class="$icons--next-dims">
+							<use xlink:href="#icons--next"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--next</h2>
+				</li>
+				<li title="icons--phone-call">
+					<div class="icon-box">
+						
+						<!-- icons--phone-call -->
+						<svg class="$icons--phone-call-dims">
+							<use xlink:href="#icons--phone-call"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--phone-call</h2>
+				</li>
+				<li title="icons--ribbon">
+					<div class="icon-box">
+						
+						<!-- icons--ribbon -->
+						<svg class="$icons--ribbon-dims">
+							<use xlink:href="#icons--ribbon"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--ribbon</h2>
+				</li>
+				<li title="icons--shopping-cart">
+					<div class="icon-box">
+						
+						<!-- icons--shopping-cart -->
+						<svg class="$icons--shopping-cart-dims">
+							<use xlink:href="#icons--shopping-cart"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--shopping-cart</h2>
+				</li>
+				<li title="icons--success">
+					<div class="icon-box">
+						
+						<!-- icons--success -->
+						<svg class="$icons--success-dims">
+							<use xlink:href="#icons--success"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--success</h2>
+				</li>
+				<li title="icons--twitter-logo-button">
+					<div class="icon-box">
+						
+						<!-- icons--twitter-logo-button -->
+						<svg class="$icons--twitter-logo-button-dims">
+							<use xlink:href="#icons--twitter-logo-button"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--twitter-logo-button</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<section>
+
+<!--
+	
+B) Inline SVG with external sprite (IE 9-11 with polyfill only)
+====================================================================================================
+These SVG images make use of an URL + fragment identifiers (IDs) and refer to the regular external
+SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
+
+-->
+
+			<h3>B) Inline SVG with external sprite (IE 9-11 with polyfill only)</h3>
+			<ul>
+				
+				<li title="icons--back">
+					<div class="icon-box">
+						
+						<!-- icons--back -->
+						<svg class="$icons--back-dims">
+							<use xlink:href="sprite.symbol.svg#icons--back"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--back</h2>
+				</li>
+				<li title="icons--facebook-logo-button">
+					<div class="icon-box">
+						
+						<!-- icons--facebook-logo-button -->
+						<svg class="$icons--facebook-logo-button-dims">
+							<use xlink:href="sprite.symbol.svg#icons--facebook-logo-button"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--facebook-logo-button</h2>
+				</li>
+				<li title="icons--icon-cross">
+					<div class="icon-box">
+						
+						<!-- icons--icon-cross -->
+						<svg class="$icons--icon-cross-dims">
+							<use xlink:href="sprite.symbol.svg#icons--icon-cross"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--icon-cross</h2>
+				</li>
+				<li title="icons--instagram-logo">
+					<div class="icon-box">
+						
+						<!-- icons--instagram-logo -->
+						<svg class="$icons--instagram-logo-dims">
+							<use xlink:href="sprite.symbol.svg#icons--instagram-logo"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--instagram-logo</h2>
+				</li>
+				<li title="icons--logout">
+					<div class="icon-box">
+						
+						<!-- icons--logout -->
+						<svg class="$icons--logout-dims">
+							<use xlink:href="sprite.symbol.svg#icons--logout"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--logout</h2>
+				</li>
+				<li title="icons--magnifying-glass">
+					<div class="icon-box">
+						
+						<!-- icons--magnifying-glass -->
+						<svg class="$icons--magnifying-glass-dims">
+							<use xlink:href="sprite.symbol.svg#icons--magnifying-glass"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--magnifying-glass</h2>
+				</li>
+				<li title="icons--next">
+					<div class="icon-box">
+						
+						<!-- icons--next -->
+						<svg class="$icons--next-dims">
+							<use xlink:href="sprite.symbol.svg#icons--next"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--next</h2>
+				</li>
+				<li title="icons--phone-call">
+					<div class="icon-box">
+						
+						<!-- icons--phone-call -->
+						<svg class="$icons--phone-call-dims">
+							<use xlink:href="sprite.symbol.svg#icons--phone-call"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--phone-call</h2>
+				</li>
+				<li title="icons--ribbon">
+					<div class="icon-box">
+						
+						<!-- icons--ribbon -->
+						<svg class="$icons--ribbon-dims">
+							<use xlink:href="sprite.symbol.svg#icons--ribbon"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--ribbon</h2>
+				</li>
+				<li title="icons--shopping-cart">
+					<div class="icon-box">
+						
+						<!-- icons--shopping-cart -->
+						<svg class="$icons--shopping-cart-dims">
+							<use xlink:href="sprite.symbol.svg#icons--shopping-cart"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--shopping-cart</h2>
+				</li>
+				<li title="icons--success">
+					<div class="icon-box">
+						
+						<!-- icons--success -->
+						<svg class="$icons--success-dims">
+							<use xlink:href="sprite.symbol.svg#icons--success"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--success</h2>
+				</li>
+				<li title="icons--twitter-logo-button">
+					<div class="icon-box">
+						
+						<!-- icons--twitter-logo-button -->
+						<svg class="$icons--twitter-logo-button-dims">
+							<use xlink:href="sprite.symbol.svg#icons--twitter-logo-button"></use>
+						</svg>
+						
+					</div>
+					<h2>icons--twitter-logo-button</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Sun, 16 Oct 2016 14:37:24 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>
