@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Pink</title>
+  <link rel="stylesheet" href="build/css/main.css">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+  <header class="page-header">
+    <div class="page-header__inner">
+      <div id="header" class="page-header__menu">
+        <a class="page-header__logo-link" href="#">PINK</a>
+        <nav id="menu" class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__list-item">
+              <a class="logo" href="#">
+              </a>
+              <button href="#" id="close" class="cross"></button>
+            </li>
+             <li class="main-nav__list-item">
+              <a href="#info">
+                Информация
+              </a>
+            </li>
+            <li class="main-nav__list-item">
+              <a href="#features">
+                Возможности
+              </a>
+            </li>
+            <li class="main-nav__list-item">
+              <a href="#reviews">  
+                Отзывы
+              </a>
+            </li>
+            <li class="main-nav__list-item">
+              <a href="#tariffs">
+                Стоимость
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <a id="toggler" class="menu-toggler" href="#"><span></span></a>
+      </div>
+      <div id="info" class="page-header__promo">
+        <div class="page-header__download">
+          <p class="download__promo-text">
+            Взгляните на жизнь иначе!
+          </p>
+          <a class="download__btn" href="#">
+            Скачать приложение
+          </a>
+          <ul class="download__os-list">
+            <li class="download__os-list-item">
+              <a class="logo-os  logo-os--apple" href="#">
+                Скачать приложение для устройств Mac OS
+              </a>
+            </li>
+            <li class="download__os-list-item">
+              <a class="logo-os  logo-os--android" href="#">
+                Скачать приложение для устройств Android
+              </a>
+            </li>
+            <li class="download__os-list-item">
+              <a class="logo-os  logo-os--windows" href="#">
+                Скачать приложение для устройств Windows
+              </a>
+            </li>
+          </ul>
+          <p class="download__options">
+            Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+  <div class="page-content">
+
+    <div class="features" id="features">
+      <div class="features__inner">
+        <h1 class="features__h1">
+          <span class="features__slogan">Устали от серости мегаполиса?</span>
+          <span class="features__slogan">Нам есть, что вам<br>предложить!</span>
+        </h1>
+        <div class="features__sections">
+          <div class="features__container">
+            <section class="features__item">
+              <h2 class="features__h2">Поднимает настроение</h2>
+              <p class="features__text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в&nbsp;несколько кликов!</p>
+            </section>
+            <section class="features__item">
+              <h2 class="features__h2">Меняет мир вокруг</h2>
+              <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект!</p>
+            </section>
+            <section class="features__item">
+              <h2 class="features__h2">Заводит новых друзей</h2>
+              <p class="features__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых!</p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="research">
+      <div class="research__inner">
+        <section class="research__item">
+          <h2 class="research__h2">Эффект на&nbsp;24 часа!</h2>
+          <p class="research__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+          <a class="research__link" href="#">Узнать больше об исследовании</a>
+        </section>
+      </div>
+    </div>
+
+    <div class="reviews" id="reviews">
+      <div class="reviews__inner">
+        <div class="reviews__slider-wrap">
+          <input type="radio" id="button-1" name="controls" checked="checked" />
+          <input type="radio" id="button-2" name="controls" />
+          <input type="radio" id="button-3" name="controls" />
+          <div class="reviews-paginator">
+            <label for="button-1"></label>
+            <label for="button-2"></label>
+            <label for="button-3"></label>
+          </div>
+          <label for="button-1" class="arrows" id="arrow-1">o</label>
+          <label for="button-2" class="arrows" id="arrow-2">o</label>
+          <label for="button-3" class="arrows" id="arrow-3">o</label>
+          <div class="reviews__slider">
+
+            <ul>
+              <li class="reviews__slide">
+                <div class="reviews__author">
+                  <span class="reviews__h2">Николай Петров</span>
+                  <span class="reviews__info">25 лет, водитель трамвая</span>
+                </div>
+                <blockquote class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+              </li>
+              <li class="reviews__slide">
+                <div class="reviews__author">
+                  <span class="reviews__h2">Иван Семёнов</span>
+                  <span class="reviews__info">45 лет, водитель звездолёта</span>
+                </div>
+                <blockquote class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!»</blockquote>
+              </li>
+              <li class="reviews__slide">
+                <div class="reviews__author">
+                  <span class="reviews__h2">Михаил Светлов</span>
+                  <span class="reviews__info">35 лет, человек и пароход</span>
+                </div>
+                <blockquote class="reviews__text">«А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии! А ещё вот!»</blockquote>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="tariffs" id="tariffs">
+      <div class="tariffs__inner">
+
+        <input type="radio" id="btn-11" name="toggled" checked>
+        <input type="radio" id="btn-22" name="toggled">
+        <input type="radio" id="btn-33" name="toggled">
+        <div class="tariffs-paginator">
+          <label for="btn-11"></label>
+          <label for="btn-22"></label>
+          <label for="btn-33"></label>
+        </div>
+
+        <div class="tariffs__table-wrap">
+
+          <table class="tariffs__table">
+            <tr class="tariffs__row-1">
+              <td class="tariffs__col-1">
+              </td>
+              <td class="tariffs__col-2">
+                <div class="tariffs__buy">
+                  <span class="tariffs__name">База</span>
+                  <span class="tariffs__price">1,99 USD</span>
+                </div>
+              </td>
+              <td class="tariffs__col-3">
+                <div class="tariffs__buy">
+                  <p class="tariffs__ribbon"><span>ХИТ</span>
+                  </p>
+                  <span class="tariffs__name">Стандарт</span>
+                  <span class="tariffs__price">3,99 USD</span>
+                </div>
+              </td>
+              <td class="tariffs__col-4">
+                <div class="tariffs__buy">
+                  <span class="tariffs__name">АНЛИМ</span>
+                  <span class="tariffs__price">9,99 USD</span>
+                </div>
+              </td>
+            </tr>
+            <tr class="tariffs__row-2">
+              <td class="tariffs__col-1">
+                <span class="package-option">Розовый фильтр</span>
+              </td>
+              <td class="tariffs__col-2">
+                <div class="tariffs__wrap">
+                  <span class="package-option--320">Розовый фильтр</span>
+                  <span class="icon  icon-yes">Есть</span>
+                </div>
+              </td>
+              <td class="tariffs__col-3">
+                <div class="tariffs__wrap">
+                  <span class="package-option--320">Розовый фильтр</span>
+                  <span class="icon  icon-yes">Есть</span>
+                </div>
+              </td>
+              <td class="tariffs__col-4">
+                <div class="tariffs__wrap">
+                  <span class="package-option--320">Розовый фильтр</span>
+                  <span class="icon  icon-yes">Есть</span>
+                </div>
+              </td>
+            </tr>
+            <tr class="tariffs__row-3">
+              <td class="tariffs__col-1">
+                <a class="package-option">Смайлики</a>
+              </td>
+              <td class="tariffs__col-2">
+                <div class="tariffs__wrap">
+                  <span class="package-option--320">Смайлики</span>
+                  <span class="icon  icon-no">Нет</span>
+                </div>
+              </td>
+              <td class="tariffs__col-3">
+                <div class="tariffs__wrap">
+                  <span class="package-option--320">Смайлики</span>
+                  <span class="icon  icon-yes">Есть</span>
+                </div>
+              </td>
+              <td class="tariffs__col-4">
+                <div class="tariffs__wrap">
+                  <span class="package-option--320">Смайлики</span>
+                  <span class="icon  icon-yes">Нет</span>
+                </div>
+              </td>
+            </tr>
+            <tr class="tariffs__row-4">
+              <td class="tariffs__col-1">
+                <a class="tariffs-option">Комментарии</a>
+              </td>
+              <td class="tariffs__col-2">
+                <div class="tariffs__wrap">
+                  <span class="package-option--320">Комментарии</span>
+                  <span class="icon  icon-no">Нет</span>
+                </div>
+              </td>
+              <td class="tariffs__col-3">
+                <div class="tariffs__wrap">
+                  <span class="package-option--320">Комментарии</span>
+                  <span class="icon  icon-no">Нет</span>
+                </div>
+              </td>
+              <td class="tariffs__col-4">
+                <div class="tariffs__wrap">
+                  <span class="package-option--320">Комментарии</span>
+                  <span class="icon  icon-yes">Есть</span>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <footer class="page-footer">
+      <div class="page-footer__inner">
+        <p class="page-footer__header">Остались вопросы?
+          <br>Свяжитесь с нами!</p>
+        <div class="page-footer__contacts-wrap">
+          <div class="page-footer__contacts">
+            <p class="page-footer__call">Звоните:</p>
+            <a class="page-footer__text" href="tel:88001000900">8 (800) 1000 900</a>
+          </div>
+          <div class="page-footer__contacts">
+            <p class="page-footer__write">Пишите:</p>
+            <a class="page-footer__text" href="mailto:hello@pinkapp.ru">hello@pinkapp.ru</a>
+          </div>
+          <div class="page-footer__contacts">
+            <p class="page-footer__come">Приезжайте в гости:</p>
+            <p class="page-footer__text">Санкт-Петербург, Невский проспект, д. 20</p>
+          </div>
+        </div>
+      </div>
+      <div id="map" class="google-map"></div>
+      <div class="page-footer__inner">
+        <div class="page-footer__low">
+          <a class="page-footer__logo-link" href="#">PINK</a>
+          <div class="page-footer__social">
+            <a class="page-footer__icon twitter" href="#">
+              Twitter
+            </a>
+            <a class="page-footer__icon facebook" href="#">
+              Facebook
+            </a>
+            <a class="page-footer__icon youtube" href="#">
+              Youtube
+              </a>
+          </div>
+          <div class="page-footer__design"> Website by <a class="page-footer__credit icon-designer" href="#">A. Glukhanko</a> for <a class="page-footer__credit  icon-customer" href="#">HTML Academy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script src="build/js/script.js"></script>
+
+</body>
+
+</html>
