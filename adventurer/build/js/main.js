@@ -2,7 +2,7 @@
 {
 	'use strict';
 
-	var file     = 'build/sprite.symbol.svg',
+	var file     = 'sprite.symbol.svg',
 		revision = 1;
 
 	if( !document.createElementNS || !document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect )
