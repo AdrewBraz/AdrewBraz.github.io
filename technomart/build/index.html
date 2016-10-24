@@ -522,9 +522,9 @@
       </div>  
     </footer>
     
-    <div class="login__popup">
-      <form action="" class="login__form">
-       <i class="login__icon-cross">
+    <div class="login">
+      <form action="post" class="login__form">
+       <i id='cross' class="login__icon-cross">
           <svg class="icon-cross">
             <use xlink:href='#icons--icon-cross'/>
           </svg>
@@ -556,33 +556,33 @@
         <a href="#" class="confirm__submit-btn">
           Оформить заказ
         </a>
-        <a href="#" class="confirm__submit-continue">
+        <a href="#continue" class="confirm__submit-continue">
           продолжить
         </a>
       </div>
     </div>
     
-    <div class="write-form__popup">
-      <form action="" class="write-form">
-        <div class="write-form__data">
-          <div class="write-form__data-name">
+    <div class="write">
+      <form action="POST" class="write-form">
+        <div class="write__data">
+          <div class="write__data-name">
             <label for="name" id="name">Ваше имя</label>
             <input type="text" name="name" id="name" placeholder="Ваше имя">
           </div>
-          <div class="write-form__data-email">   
+          <div class="write__data-email">   
             <label for="email" id="email">Ваш email</label>
             <input type="email" name="email" id="email" placeholder="Ваша почта">
           </div>  
         </div>
-        <div class="write-form__field">
+        <div class="write__field">
           <label for="text-field">Текст письма</label>
           <textarea name="field" id="text-field" cols="30" rows="10"></textarea>
         </div>
-        <div class="write-form__submit">
-          <a href="#" class="write-form__submit-btn">
+        <div class="write__submit">
+          <a href="#" class="write__submit-btn">
             отправить
           </a>
-          <a href="#" class="write-form__submit-cancel">
+          <a href="#writecancel" class="write__submit-cancel">
             отмена
           </a>
         </div>
@@ -592,7 +592,6 @@
     <script defer type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=i-FwELn4Ao6q8dheV5ye_xfHNisUSCAA&amp;width=300&amp;height=160&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true;id=map"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/popup.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/slider.js"></script>               
+    <script src="js/main.js"></script>              
 </body>
 </html>

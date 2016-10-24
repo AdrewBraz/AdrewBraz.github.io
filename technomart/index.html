@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="build/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=cyrillic-ext"  rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -136,13 +135,13 @@
             <div class="shop-content__slider-container">
               <ul class="slider__wrap">
                 <li class="slider__elem">
-                  <img src="build/img/images/slider-1.png" width="620px" height="266px" alt="slide">
+                  <img src="img/images/slider-1.png" width="620px" height="266px" alt="slide">
                 </li>
                 <li class="slider__elem">
-                  <img src="build/img/images/slider-2.png" width="620px" height="266px" alt="slide">
+                  <img src="img/images/slider-2.png" width="620px" height="266px" alt="slide">
                 </li>
                 <li class="slider__elem">
-                  <img src="build/img/images/slider-1.png" width="620px" height="266px" alt="slide">
+                  <img src="img/images/slider-1.png" width="620px" height="266px" alt="slide">
                 </li>
               </ul>
               <div class="slider-nav">
@@ -192,7 +191,7 @@
          </div>
           <div class="favorite-products__items">
             <div class="favorite-products__item">
-              <img src="build/img/images/technomart-index_03.jpg" alt="product-item">
+              <img src="img/images/technomart-index_03.jpg" alt="product-item">
               <h5 class="favorite-products__item-name">
                 Перфоратор BOSH BFG 9000
               </h5>
@@ -212,7 +211,7 @@
               </div>
             </div>
             <div class="favorite-products__item">
-              <img src="build/img/images/technomart-index_05.jpg" alt="product-item">
+              <img src="img/images/technomart-index_05.jpg" alt="product-item">
               <h5 class="favorite-products__item-name">
                 Перфоратор BOSH BFG 9000
               </h5>
@@ -232,7 +231,7 @@
               </div>
             </div>
             <div class="favorite-products__item">
-              <img src="build/img/images/technomart-index_03.jpg" alt="product-item">
+              <img src="img/images/technomart-index_03.jpg" alt="product-item">
               <h5 class="favorite-products__item-name">
                 Перфоратор BOSH BFG 9000
               </h5>
@@ -248,7 +247,7 @@
               </div>
             </div>
             <div class="favorite-products__item">
-              <img src="build/img/images/technomart-index_05.jpg" alt="product-item">
+              <img src="img/images/technomart-index_05.jpg" alt="product-item">
               <h5 class="favorite-products__item-name">
                 Перфоратор BOSH BFG 9000
               </h5>
@@ -284,42 +283,42 @@
           <div class="favorite-brands__wrap">
             <div class="favorite-brands__item">
               <a href="#">
-                <img src="build/img/images/bosch.jpg" alt="bosch">
+                <img src="img/images/bosch.jpg" alt="bosch">
               </a>
             </div>
             <div class="favorite-brands__item">
               <a href="#">
-                <img src="build/img/images/dewalt.jpg" alt="dewalt">
+                <img src="img/images/dewalt.jpg" alt="dewalt">
               </a>
             </div>
             <div class="favorite-brands__item">
               <a href="#">
-                <img src="build/img/images/hitachi.jpg" alt="hitachi">
+                <img src="img/images/hitachi.jpg" alt="hitachi">
               </a>
             </div>
             <div class="favorite-brands__item">
               <a href="#">
-                <img src="build/img/images/interskol.jpg" alt="interskol">
+                <img src="img/images/interskol.jpg" alt="interskol">
               </a>
             </div>
             <div class="favorite-brands__item">
               <a href="#">
-                <img src="build/img/images/lg.jpg" alt="lg">
+                <img src="img/images/lg.jpg" alt="lg">
               </a>
             </div>
             <div class="favorite-brands__item">
               <a href="#">
-                <img src="build/img/images/makita.jpg" alt="makita">
+                <img src="img/images/makita.jpg" alt="makita">
               </a>
             </div>
             <div class="favorite-brands__item">
               <a href="#">
-                <img src="build/img/images/aeg.jpg" alt="aeg">
+                <img src="img/images/aeg.jpg" alt="aeg">
               </a>
             </div>
             <div class="favorite-brands__item">
               <a href="#">
-                <img src="build/img/images/metabo.jpg" alt="metabo">
+                <img src="img/images/metabo.jpg" alt="metabo">
               </a>
             </div>          
           </div>
@@ -522,9 +521,9 @@
       </div>  
     </footer>
     
-    <div class="login__popup">
-      <form action="" class="login__form">
-       <i class="login__icon-cross">
+    <div class="login">
+      <form action="post" class="login__form">
+       <i id='cross' class="login__icon-cross">
           <svg class="icon-cross">
             <use xlink:href='#icons--icon-cross'/>
           </svg>
@@ -556,33 +555,33 @@
         <a href="#" class="confirm__submit-btn">
           Оформить заказ
         </a>
-        <a href="#" class="confirm__submit-continue">
+        <a href="#continue" class="confirm__submit-continue">
           продолжить
         </a>
       </div>
     </div>
     
-    <div class="write-form__popup">
-      <form action="" class="write-form">
-        <div class="write-form__data">
-          <div class="write-form__data-name">
+    <div class="write">
+      <form action="POST" class="write-form">
+        <div class="write__data">
+          <div class="write__data-name">
             <label for="name" id="name">Ваше имя</label>
             <input type="text" name="name" id="name" placeholder="Ваше имя">
           </div>
-          <div class="write-form__data-email">   
+          <div class="write__data-email">   
             <label for="email" id="email">Ваш email</label>
             <input type="email" name="email" id="email" placeholder="Ваша почта">
           </div>  
         </div>
-        <div class="write-form__field">
+        <div class="write__field">
           <label for="text-field">Текст письма</label>
           <textarea name="field" id="text-field" cols="30" rows="10"></textarea>
         </div>
-        <div class="write-form__submit">
-          <a href="#" class="write-form__submit-btn">
+        <div class="write__submit">
+          <a href="#" class="write__submit-btn">
             отправить
           </a>
-          <a href="#" class="write-form__submit-cancel">
+          <a href="#writecancel" class="write__submit-cancel">
             отмена
           </a>
         </div>
@@ -592,7 +591,6 @@
     <script defer type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=i-FwELn4Ao6q8dheV5ye_xfHNisUSCAA&amp;width=300&amp;height=160&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true;id=map"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="build/js/popup.js"></script>
-    <script src="build/js/main.js"></script>
-    <script src="build/js/slider.js"></script>               
+    <script src="build/js/main.js"></script>              
 </body>
 </html>
