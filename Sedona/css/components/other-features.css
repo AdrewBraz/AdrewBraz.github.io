@@ -1,0 +1,20 @@
+.other-features {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  padding-left: 20%;
+}
+.other-features__item {
+  width: 65.6%;
+}
+.other-features__item--icon-house,
+.other-features__item--icon-gift,
+.other-features__item--icon-burger {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  min-width: 40px;
+  min-height: 40px;
+}
