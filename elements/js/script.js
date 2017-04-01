@@ -25,19 +25,19 @@
         }
     }
 
-    Periodic.prototype.change = function(selector) {
+    Periodic.prototype.checkOptions = function(e) {
         var _self = this;
-        selector.onchange = function(e) {
-            target = e.target;
-            while (target != selector) {
-                if (target.tagName == "INPUT") {
-                    _self.show(target, _self.mass, _self.massFlag);
-                    _self.show(target, _self.couche, _self.numFlag);
-                }
-                target = target.parentNode;
-            };
-        }
+        target = e.target;
+        current = e.currentTarget;
+        while (target != current) {
+            if (target.tagName == "INPUT") {
+                _self.show(target, _self.mass, _self.massFlag);
+                _self.show(target, _self.couche, _self.numFlag);
+            }
+            target = target.parentNode;
+        };
     }
+
 
     Periodic.prototype.showElement = function(selector) {
         var _self = this;
@@ -50,8 +50,13 @@
         }
     }
 
+
+
     Periodic.prototype.init = function() {
-        this.change(this.options);
+        var _self = this;
+        this.options.onclick = function(e) {
+            _self.checkOptions(e);
+        }
         this.showElement(this.root);
     };
 
