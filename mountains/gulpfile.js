@@ -101,7 +101,7 @@ gulp.task('svg:build', function() {
                 symbol: {
                     dest: '.',
                     prefix: '$',
-                    sprite: 'sprite.symbol.svg',
+                    sprite: 'sprite.mountains.svg',
                     layout: 'vertical',
                     dimensions: true,
                     bast: false,
