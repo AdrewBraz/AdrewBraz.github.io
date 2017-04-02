@@ -39,14 +39,12 @@
     }
 
 
-    Periodic.prototype.showElement = function(selector) {
+    Periodic.prototype.showElement = function(e) {
         var _self = this;
-        selector.onmouseover = function(e) {
-            _self.focus.innerHTML = "";
-            target = e.target;
-            for (var i = 0; i < target.children.length; i++) {
-                _self.focus.appendChild(target.children[i].cloneNode(true));
-            }
+        this.focus.innerHTML = "";
+        target = e.target;
+        for (var i = 0; i < target.children.length; i++) {
+            this.focus.appendChild(target.children[i].cloneNode(true));
         }
     }
 
@@ -57,7 +55,9 @@
         this.options.onclick = function(e) {
             _self.checkOptions(e);
         }
-        this.showElement(this.root);
+        this.root.onmouseover = function(e) {
+            _self.showElement(e);
+        }
     };
 
     var periodic = new Periodic();
