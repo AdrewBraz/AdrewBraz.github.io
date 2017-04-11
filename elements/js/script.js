@@ -55,7 +55,9 @@
         periodic.checkOptions(e)
     };
 
-    periodic.root.mouseover = function(e) {
+    console.log(periodic.root)
+    
+    periodic.root.onmouseover = function(e) {
         periodic.showElement(e);
     }
 })();
