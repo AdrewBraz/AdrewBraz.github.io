@@ -1,5 +1,5 @@
 # Sedona. Full responsive layout (IE10+)
 
-*less
-*Native JS
-*SVG
+* less
+* Native JS
+* SVG
