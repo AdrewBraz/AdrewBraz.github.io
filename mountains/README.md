@@ -4,3 +4,4 @@
 * jquery
 * gulp
 * svg(svg-sprite)
+* transition effects(wow.js)
