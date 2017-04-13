@@ -1,4 +1,4 @@
-# Simple task-list
+# Simple todo-list
 
 * jquery
 * modular js
