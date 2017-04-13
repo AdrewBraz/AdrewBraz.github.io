@@ -4,3 +4,4 @@
 * SCSS
 * Jquery
 * AJAX (Vimeo API)
+* wow.js
