@@ -1,4 +1,4 @@
-# Full responsive layour
+# Full responsive layout
 
 * Bootstrap 3
 * SCSS
