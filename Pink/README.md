@@ -2,4 +2,5 @@
 
 * less
 * svg
-* native js
+* js
+* gulp
