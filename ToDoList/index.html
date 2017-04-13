@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>To Do List</title>
-  <link rel="stylesheet" href="build/styles/style.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="icon" href="todo.ico" type="image/x-icon" />
 </head>
 <body>
   
@@ -23,14 +24,14 @@
        {{#tasks}}
            <li class="list-item">
              <span>{{.}}</span>
-             <i class="close"></i>
+             <i class="del"></i>
            </li>    
        {{/tasks}}
      </script>
    </ul>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="build/js/mustache/mustache.js"></script>
-  <script src="build/js/script.js"></script>
+  <script src="js/mustache/mustache.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
