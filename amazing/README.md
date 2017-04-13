@@ -3,4 +3,4 @@
 * Bootstrap 3
 * SCSS
 * Jquery
-* Vimeo API
+* AJAX (Vimeo API)
