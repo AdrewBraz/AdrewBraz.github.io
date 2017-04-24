@@ -5,3 +5,5 @@
 * Jquery
 * AJAX (Vimeo API)
 * wow.js
+
+[watch demo](https://adrewbraz.github.io/amazing/)
