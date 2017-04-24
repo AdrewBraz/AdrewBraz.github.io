@@ -1,4 +1,6 @@
 # Periodic table with some JS-effects
 
-* JS(OOP)
+* JS
 * webpack
+
+[watch demo](https://adrewbraz.github.io/elements/)
