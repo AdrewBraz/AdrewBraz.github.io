@@ -3,5 +3,7 @@
 * bootstrap 3
 * jquery
 * gulp
-* svg(svg-sprite)
+* svg
 * transition effects(wow.js)
+
+[watch demo](https://adrewbraz.github.io/mountains/)

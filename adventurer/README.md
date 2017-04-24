@@ -1,6 +1,8 @@
 # Full responsive layout (IE10+)
 
 * stylus
-* SVG(svg sprite)
+* SVG
 * gulp
 * JS
+
+[watch demo](https://adrewbraz.github.io/adventurer/)
