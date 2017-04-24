@@ -5,4 +5,4 @@
 * js
 * gulp
 
-[watch demo](https://adrewbraz.github.io/Sedona/)
+[watch demo](https://adrewbraz.github.io/Pink/)
