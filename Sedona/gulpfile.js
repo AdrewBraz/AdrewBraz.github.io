@@ -18,26 +18,23 @@ const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'developm
 
 var path = {
     build: {
-        html: 'build/',
-        js: 'build/js/',
-        css: 'build/css/',
-        img: 'build/img/',
-        svg: 'build/'
+        html: './',
+        js: './js/',
+        css: './css/',
+        img: './img/' 
     },
 
     src: {
         html: 'src/index.html',
         js: 'src/js/*.js',
         style: 'src/style/style.less',
-        img: 'src/img/**/*.*',
-        svg: 'src/img/**/*.svg'
+        img: 'src/img/**/*.*'
     },
     watch: {
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
         style: 'src/style/**/*.less',
-        img: 'src/img/**/*.*',
-        icons: 'src/img/**/*.svg'
+        img: 'src/img/**/*.*'
     },
 };
 
