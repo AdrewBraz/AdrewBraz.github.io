@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="icon" href="todo.ico" type="image/x-icon" />
+</head>
+<body>
+  
+  <div class="stats-block" id="statsModule">
+    <script id="stats-template" type="text/template">
+      <h2 class="header">Stats</h2>
+      <span class="stats-block__item">tasks: {{tasks}}
+    </script>
+  </div>
+ 
+  <div class="mod-wrapper" id="tasksModule">
+   <h1 class="title">What to do?</h1>
+   <input type="text" placeholder="Task">
+   <button class="btn" id="addTask">Add task</button>
+   <ul class="list" id="people">
+     <script id="task-template" type="text/template">
+       {{#tasks}}
+           <li class="list-item">
+             <span>{{.}}</span>
+             <i class="del"></i>
+           </li>    
+       {{/tasks}}
+     </script>
+   </ul>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/mustache/mustache.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

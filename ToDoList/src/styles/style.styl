@@ -1,0 +1,130 @@
+body
+  margin 0
+  padding 0
+  
+  font-family sans-serif
+  font-size 18px
+  color #000
+  background #f6fcff
+
+  
+.stats-block
+  display block
+  width 25%
+  border-radius 10px
+  
+  padding 30px
+  margin 30px auto 0
+  
+  background #e5e5e5 
+  
+.header
+  margin 0
+  margin-bottom 15px  
+  
+  font-size 36px
+
+  
+.mod-wrapper
+  display block
+  
+  width 50%
+  text-align center
+  margin 0 auto
+  padding 50px 0
+  
+.title
+  margin 0 0 30px 0
+  
+  font-size 40px
+
+.btn
+  padding 11px
+  border none
+  outline none
+  
+  font-size 21px
+  border-radius 15px
+  
+  background  #3a2869
+  color #fff
+  
+  &:hover
+    transform scale(1.1)
+  
+input[type='text']
+  width 198px
+  padding 10px 20px
+  
+  border 1px solid #3a2869
+  outline none
+  border-radius 6px
+  font-size 21px
+
+  &:focus
+    border 2px solid red
+    border-radius 6px 
+  
+.list
+  margin 40px 0
+  padding 0
+  
+.list-item
+  display flex
+  flex-direction row
+  align-items center
+  justify-content space-between
+  
+  margin 10px
+  padding 15px 10px
+  
+  text-align left
+  border-radius 18px
+  font-size 18px
+  background #eee;
+  
+  &:nth-child(odd)
+    background #f5f4f4
+  
+  &:hover
+    background #e5e5e5
+  
+  & span
+    display block
+    word-wrap break-word
+    
+.del
+  display inline-block
+  position relative
+  
+  width 25px
+  height 25px
+  
+  border-radius 50%
+  background #020
+  
+  cursor pointer
+  
+  &:hover
+    background #f00
+  
+  &:before,
+  &:after
+    content '' 
+    position absolute
+    
+    top 4px
+    
+    width 3px
+    height 16px
+    
+    background #fff
+  &::before
+    left 11px
+    
+    transform rotate(45deg)
+    
+  &::after
+    right 11px
+    
+    transform rotate(-45deg)

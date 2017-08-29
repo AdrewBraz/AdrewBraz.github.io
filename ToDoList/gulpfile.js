@@ -14,7 +14,7 @@ const debug = require('gulp-debug');
 gulp.task('html:build', function () {
  return gulp.src('src/index.html')
         .pipe(rigger())
-        .pipe(gulp.dest('build/'));
+        .pipe(gulp.dest('./'));
 });
 
 gulp.task('js:build', function () {
@@ -22,7 +22,7 @@ gulp.task('js:build', function () {
         .pipe(rigger())
         .pipe(sourcemaps.init())
         .pipe(sourcemaps.write()) 
-        .pipe(gulp.dest('build/js/'))
+        .pipe(gulp.dest('./js/'))
 });
 
 gulp.task('style:build', function () {
@@ -37,14 +37,14 @@ gulp.task('style:build', function () {
         .pipe(cleanCss())
         .pipe(sourcemaps.write())
         .pipe(debug())
-        .pipe(gulp.dest('build/')) //И в build
+        .pipe(gulp.dest('./')) //И в build
 });
 
 gulp.task('serve', function(){
   browserSync.init({
-    server: 'build'
+    server: '.'
   })
-  browserSync.watch('build/**/*.*').on('change', browserSync.reload);
+  browserSync.watch('./**/*.*').on('change', browserSync.reload);
 });
 
 gulp.task('build', gulp.parallel('html:build','style:build','js:build' ));  
