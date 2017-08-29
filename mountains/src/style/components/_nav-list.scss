@@ -1,0 +1,15 @@
+.nav-list{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  
+  list-style: none;
+  
+  &__item{
+    & a{
+      font-size: $font-size-h4;
+      text-transform: uppercase;
+      color: $brand-info;
+    }
+  }
+}

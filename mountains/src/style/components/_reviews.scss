@@ -1,0 +1,51 @@
+.reviews{
+  padding-top: 5em;
+  
+  &__container{
+    padding-bottom: 3em;
+  }
+  
+  &__header{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: $headings-font-weight;
+  }
+  
+}
+
+.client-review{
+  padding-top: 1em;
+  padding-bottom: 1em;
+  
+  @media screen and(min-width: 768px) {
+    width: 45%!important;
+  }
+  
+  @media screen and(min-width: 1024px) {
+    padding-top: 5em;
+  }
+  
+  &__quote{
+    padding: 10px 0;
+    border: none;
+  }
+  
+  &__person{
+    margin: 20px 0;
+  }
+  
+  &__person-name{
+    display: block;
+    
+    font-size: $font-size-h5;
+    font-weight: bold;
+    color: $brand-primary;
+  }
+  
+  &__person-prof{
+    display: block;
+    
+    color: $gray;
+    font-size: $font-size-h5;
+  }
+}

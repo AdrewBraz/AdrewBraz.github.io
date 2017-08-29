@@ -1,0 +1,105 @@
+.blog {
+    background-color: $gray-lighter;
+    @media screen and(min-width: 768px) {
+        padding-bottom: 5em;
+    }
+    
+    &__container {
+        padding-bottom: 20px;
+        background-size: contain;
+        background-position: 10px 110px;
+        background-image: url(../img/bg2.png);
+        background-repeat: no-repeat;
+        @media screen and(min-width: 768px) {
+            height: 60vh;
+            padding-bottom: 50px;
+            background-position: 140px 20px;
+        }
+    }
+    &__images {
+        position: relative;
+        height: 300px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 0;
+        &--small,
+        &--big {
+            margin: 0;
+            position: absolute;
+        }
+        &--small {
+            top: 40%;
+            left: -35%;
+            width: 130px;
+            height: 130px;
+            background-image: url(../img/photo-small.png);
+            background-size: cover;
+            @media screen and(min-width: 768px) {
+                top: 80%;
+                width: 180px;
+                height: 180px;
+            }
+            @media screen and(min-width: 1024px) {
+                top: 70%;
+                left: -40%;
+                width: 250px;
+                height: 250px;
+            }
+            @media screen and(min-width: 1440px) {
+                left: -25%;
+                width: 275px;
+                height: 275px;
+            }
+        }
+        &--big {
+            top: 20%;
+            left: 35%;
+            width: 200px;
+            height: 200px;
+            background-size: cover;
+            background-image: url(../img/photo-big.png);
+            @media screen and(min-width: 768px) {
+                top: -10%;
+                width: 300px;
+                height: 200px;
+            }
+            @media screen and(min-width: 1024px) {
+                width: 400px;
+                height: 300px;
+            }
+            @media screen and(min-width: 1440px) {
+                top: -10%;
+                width: 565px;
+                height: 400px;
+            }
+        }
+    }
+}
+
+.blog-description {
+    padding-top: 1em;
+    text-align: center;
+    @media screen and(min-width: 768px) {
+        padding-top: 5em;
+        text-align: left;
+    }
+    @media screen and(min-width: 1024px) {
+        padding-top: 10em;
+    }
+    @media screen and(min-width: 2560px) {
+        padding-top: 15em;
+    }
+    &__title {
+        text-transform: uppercase;
+        font-weight: $headings-font-weight;
+    }
+    &__text {
+        padding-top: 10px;
+        color: $gray;
+    }
+    &__btn {
+        margin: 20px 0;
+        background: $brand-info;
+        color: #fff;
+    }
+}

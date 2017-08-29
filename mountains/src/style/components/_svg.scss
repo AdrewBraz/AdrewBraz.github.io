@@ -1,0 +1,88 @@
+.icon-wave{
+  width: 120px;
+  height: 50px;
+  
+  fill: $gray;
+}
+
+.icon-wave--title{
+  display: block;
+  margin: 0 auto;
+  
+  width: 120px;
+  height: 50px;
+  
+  fill: $gray;
+}
+
+.icon-list,
+.icon-user,
+.icon-book,
+.icon-checked{
+  position: absolute;
+  
+  top: -40px;
+  left: 58px;
+  
+  width: 60px;
+  z-index: 100;
+}
+
+.icon-star{
+  width: 10px;
+  height: 10px;
+  
+  fill: #fff;
+}
+
+.icon-quote{
+  width: 40px;
+  height: 40px;
+  
+  fill: $gray;
+}
+
+.icon-socials--fb,
+.icon-socials--vk,
+.icon-socials--tw{
+  width: 40px;
+  height: 40px;
+}
+
+.icon-socials--fb{
+  fill: #6485cb;
+}
+
+.icon-socials--vk{
+  fill: #54769a;
+}
+
+.icon-socials--tw{
+  fill: #29c5f6;
+}
+
+.icon-menu{
+  height: 40px;
+  width: 40px;
+  
+  fill: #000;
+  
+  &:hover,
+    active{
+    fill: $brand-info;
+  }
+}
+
+
+.icon-drop,
+.icon-heart,
+.icon-leaf{
+  width: 60px;
+  height: 60px;
+  
+  fill: #fff;
+  
+  &:hover{
+    fill: $brand-danger;
+  }
+}

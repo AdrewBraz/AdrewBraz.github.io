@@ -1,0 +1,31 @@
+.gallery{
+  padding-top: 5em;
+  padding-bottom: 5em;
+  
+  &__header{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: $headings-font-weight;
+  }
+  
+  &__container{
+    position: relative;
+    
+    line-height: 0;
+    padding-top: 2em;
+   
+    -webkit-column-count: 1;
+    -webkit-column-gap:   0px;
+    -moz-column-count:    1;
+    -moz-column-gap:      0px;
+    column-count:         1;
+    column-gap:           0px;
+  }
+  
+  &__img{
+    width: 100%;
+    height: auto;
+    
+    margin-bottom: 30px;
+  }
+}

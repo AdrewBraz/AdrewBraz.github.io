@@ -1,0 +1,64 @@
+.page-footer {
+    position: relative;
+    margin-top: -100px;
+    min-height: 60vh;
+    background-image: url(../img/footer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% -100px;
+    @media screen and (min-width: 1440px) {
+        margin-top: 0;
+        background-position: 0% -260px;
+    }
+    &__form {
+        position: relative;
+        text-align: center;
+        padding: 20px 10px;
+        margin-top: 5em;
+        background: inherit;
+        box-shadow: 1px 1px 40px 5px $gray, -1px -1px 40px 5px $gray;
+    }
+    &__form-header {
+        color: $brand-info;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    &__base {
+        margin-top: 3em;
+        padding: 50px 0;
+        background: #3e606a;
+    }
+}
+
+.base {
+    &__rights {
+        padding-bottom: 10px;
+        color: #fff;
+        font-size: $font-size-h4;
+        text-align: center;
+        @media screen and(min-width: 768px) {
+            text-align: left;
+            padding-bottom: 0px;
+        }
+    }
+    &__socials {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    &__socials-item {
+        width: 39px;
+        height: 39px;
+        background: #fff;
+        display: inline-block;
+    }
+    &__contacts {
+        padding-bottom: 10px;
+        text-align: center;
+        color: #fff;
+        font-size: $font-size-h4;
+        @media screen and(min-width: 768px) {
+            padding-bottom: 0px;
+            text-align: right;
+        }
+    }
+}

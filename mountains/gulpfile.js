@@ -22,11 +22,11 @@ const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'developm
 
 var path = {
     build: {
-        html: 'build/',
-        js: 'build/js/',
-        css: 'build/css/',
-        img: 'build/img/',
-        svg: 'build/'
+        html: './',
+        js: './js/',
+        css: './css/',
+        img: './img/',
+        svg: './'
     },
 
     src: {
@@ -66,7 +66,7 @@ gulp.task("clean:output", function() {
 
 gulp.task('fonts', function() {
     return gulp.src('src/fonts/*.*')
-        .pipe(gulp.dest('build/fonts/'))
+        .pipe(gulp.dest('./fonts/'))
 })
 
 gulp.task('style:build', function() {
@@ -81,14 +81,14 @@ gulp.task('style:build', function() {
 
 gulp.task('image:build', function() {
     return gulp.src('src/img/**/*.*', { since: gulp.lastRun('image:build') })
-        .pipe(newer('build/img/'))
+        .pipe(newer('./img/'))
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{ removeViewBox: false }],
             use: [pngquant()],
             interlaced: true
         }))
-        .pipe(gulp.dest('build/img/'))
+        .pipe(gulp.dest('./img/'))
 });
 
 gulp.task('svg:build', function() {
@@ -119,12 +119,12 @@ gulp.task('svg:build', function() {
 
 gulp.task('serve', function() {
     browserSync.init({
-        server: 'build'
+        server: './'
     })
-    browserSync.watch('build/**/*.*').on('change', browserSync.reload);
+    browserSync.watch('./**/*.*').on('change', browserSync.reload);
 });
 
-gulp.task('build', gulp.parallel('html:build', 'fonts', 'style:build', 'image:build', 'js:build'));
+gulp.task('build', gulp.parallel('html:build', 'fonts', 'style:build', 'image:build', 'js:build', 'svg:build'));
 
 gulp.task('watch', function() {
     gulp.watch(path.src.html, gulp.series('html:build'));

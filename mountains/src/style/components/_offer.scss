@@ -1,0 +1,36 @@
+.offer {
+    min-height: 50vh;
+    background-image: url(../img/tree.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    //  &__mask{
+    //    background: rgba(0, 0, 0, .1);
+    //  }
+}
+
+.offer-description {
+    padding-top: 5em;
+    padding-bottom: 5em;
+    text-align: center;
+    @media screen and(min-width: 1024px) {
+        padding-top: 10em;
+        text-align: left;
+    }
+    &__header {
+        text-transform: uppercase;
+        font-weight: $headings-font-weight;
+    }
+    &__form {
+        background: #fff;
+        border: 2px solid #fff;
+        border-radius: 4px;
+    }
+    &__btn {
+        margin: 20px 0;
+        background: $brand-info;
+        color: #fff;
+        @media screen and(min-width: 992px) {
+            margin: 0;
+        }
+    }
+}

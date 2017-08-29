@@ -1,0 +1,52 @@
+.journal{
+  padding: 5em 0;
+  
+  &__header{
+    margin: 0;
+    padding-bottom: 1em;
+    
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  &__action{
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  &__icon{
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    
+    margin-top: -30px;
+    margin-left: -30px;
+    
+    cursor: pointer;
+  }
+  
+  &__note{
+    text-align: center;
+  }
+  
+  &__note-header{
+    margin: 0;
+    padding: 10px 0;
+    
+    font-size: $font-size-h5;
+    color: $brand-info;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+  }
+  
+  &__note-text{
+    & span{
+      padding: 10px 0;
+      
+      font-weight: 700;
+      font-size: $font-size-h4;
+    }
+  }
+}

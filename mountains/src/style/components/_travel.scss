@@ -1,0 +1,86 @@
+.travel {
+    min-height: 60vh;
+    margin-top: 5em;
+    background-image: url(../img/world.png), url(../img/nasty.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain;
+    background-position: 0% 10%, 0% 100%;
+    @media screen and(min-width: 2560px) {
+        background-size: cover;
+    }
+    &__header {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: $headings-font-weight;
+    }
+    &__slider {
+        min-height: 50vh;
+        margin-top: 5em;
+        margin-bottom: 10em;
+    }
+}
+
+.travel-offer {
+    margin-bottom: 20px;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &:hover {
+        box-shadow: 1px 1px 20px 0 #000, -1px -1px 20px 0 #000;
+    }
+    &:nth-child(1) {
+        background-image: url(../img/carpathian.png);
+    }
+    &:nth-child(2) {
+        background-image: url(../img/alphs.png);
+    }
+    &:nth-child(3) {
+        background-image: url(../img/pyrenees.png);
+    }
+    &:nth-child(4) {
+        background-image: url(../img/rocky.png);
+    }
+    &:nth-child(5) {
+        background-image: url(../img/kavkaz.png);
+    }
+    &__rate {
+        display: block;
+        padding-left: 10px;
+        margin-top: 10px;
+    }
+    &__title {
+        padding-left: 10px;
+        padding-top: 100px;
+    }
+    &__text {
+        padding-left: 10px;
+        padding-bottom: 50px;
+        font-size: $font-size-base;
+    }
+    &__price {
+        padding-top: 10px;
+        padding-bottom: 15px;
+        background: rgba(0, 0, 0, .3);
+        &--crossed {
+            float: left;
+            padding-left: 0.5em;
+            font-size: $font-size-h4;
+            color: #fff;
+            text-decoration: line-through;
+            &:hover {
+                color: #fff;
+            }
+        }
+        &--current {
+            float: right;
+            padding-right: 0.5em;
+            font-size: $font-size-h4;
+            color: #fff;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.travel-offers {}
