@@ -1,0 +1,28 @@
+.nav-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
+
+  list-style: none;
+  padding: 0;
+
+  @include media-breakpoint-up(md) {
+    flex-flow: column wrap;
+    height: 45%;
+  }
+
+  &__item{
+    padding-bottom: 40px;
+
+    & a{
+      color: $text-color;
+      font-size: 32px;
+
+      &:hover{
+        color: $text-color;
+      }
+    }
+  }
+}

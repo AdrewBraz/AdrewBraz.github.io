@@ -1,0 +1,31 @@
+.page-header{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  background: $mask;
+
+  &__wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px;
+  }
+
+  &__logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__logo-text{
+    padding-left: 10px;
+
+    line-height: 40px;
+    letter-spacing: -2px;
+  }
+}

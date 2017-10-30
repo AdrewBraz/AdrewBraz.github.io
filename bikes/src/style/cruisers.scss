@@ -1,0 +1,26 @@
+.cruisers{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  text-align: center;
+
+  background: $cruisers-grad, url("../img/bike2.jpg") no-repeat bottom center;
+  background-size: cover;
+
+  &__header{
+    font: $cruisers-mob;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  &__desc{
+    padding-bottom: 40px;
+  }
+
+  &__btn{
+    @include btn;
+  }
+}

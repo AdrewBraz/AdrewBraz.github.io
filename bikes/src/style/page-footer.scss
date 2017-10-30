@@ -1,0 +1,108 @@
+.page-footer{
+  background: $gray;
+
+  &__logo{
+    line-height: 40px;
+    letter-spacing: -2px;
+  }
+
+  &__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+
+    @include media-breakpoint-up(md) {
+      align-items: flex-start;
+    }
+  }
+
+  &__info-text{
+    font-size: 32px;
+    color: $text-color;
+    text-align: center;
+    line-height: 1.2em;
+    text-transform: uppercase;
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
+  }
+
+  &__info-sale{
+    font-size: 32px;
+    line-height: 1.2em;    
+    text-decoration: none;
+    color: $text-color;
+
+    &:hover{
+      color: $text-color;
+    }
+  }
+
+  &__info-copyrights{
+    font-size: 32px;
+    text-transform: uppercase;
+  }
+
+  &__nav{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 100vh;
+
+    @include media-breakpoint-up(md) {
+      height: 50vh;
+    }
+
+    &::before,&::after{
+      content: '';
+      position: absolute;
+
+      width: 80%;
+      height: 2px;
+      background: $border;
+
+      @include media-breakpoint-up(md) {
+        height: 80%;
+        width: 2px;
+      }
+    }
+
+    &::before{
+      top: 0;
+      left: 10%;
+
+      @include media-breakpoint-up(md) {
+        left: -1.5px;
+        top: 10%;
+      }
+    }
+
+    &::after{
+      bottom: 0;
+      left: 10%;
+
+      @include media-breakpoint-up(md) {
+        left: 100%;
+        top: 10%;
+      }
+    }
+  }
+
+  &__soc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__input{
+    background: rgba($mask, .2)
+  }
+    
+}

@@ -1,0 +1,9 @@
+@mixin btn{
+  padding: 40px 15px;
+  background: $mask;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 40px;
+  color: #FFF;
+}

@@ -1,0 +1,25 @@
+.fixies{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  background: $fixies-grad, url("../img/proj.jpg") no-repeat bottom center;
+  background-size: cover;
+
+  &__header{
+    font: $fixies-mob;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  &__desc{
+    padding-bottom: 40px;
+  }
+
+  &__btn{
+    @include btn;
+  }
+}
